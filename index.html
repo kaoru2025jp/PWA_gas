@@ -90,7 +90,7 @@ function calc() {
   document.getElementById("capital").textContent = capital.toFixed(2);
 
   // 合計 T 表示
-  const Traw = O1+O2;
+  const Traw = O1*T2-O2*T1;
   if (!isFinite(Traw)) {
     alert("計算結果が不正です");
     return;
