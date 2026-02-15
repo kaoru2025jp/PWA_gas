@@ -28,6 +28,28 @@ O1: <input id="O1" type="number"><br>
 O2: <input id="O2" type="number"><br>
 <button onclick="calc()">計算して送信</button>
 <p>結果 T = <span id="result"></span></p>
+
+<h3>貸借対照表</h3>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>借方</th>
+    <th>金額</th>
+    <th>貸方</th>
+    <th>金額</th>
+  </tr>
+  <tr>
+    <td>流動資産</td>
+    <td id="ca"></td>
+    <td>流動負債</td>
+    <td id="cl"></td>
+  </tr>
+  <tr>
+    <td>固定資産</td>
+    <td id="fa"></td>
+    <td>資本金</td>
+    <td id="capital"></td>
+  </tr>
+</table>
   
 <script>
 const GAS_URL = "https://script.google.com/macros/s/AKfycbzQJChZXlm5xuhFgpyHHiFG3UsBGBIZpuM5wua8LpNWMDKurOa1qFLUkG9Ucjf_1NVNjg/exec";
