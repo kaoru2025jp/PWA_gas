@@ -64,10 +64,6 @@ function calc() {
   const T1 = (B - S) / O1;
   const T2 = (B - S) / O2;
 
-  // 表示用（例：合計 or 平均など用途に応じて）
-  const T = (T1 + T2).toFixed(2);
-
-  document.getElementById("result").textContent = T;
 
   // ===== 追加計算 =====
 
@@ -84,6 +80,11 @@ function calc() {
   document.getElementById("cl").textContent = currentLiabilities.toFixed(2);
   document.getElementById("fa").textContent = fixedAssets.toFixed(2);
   document.getElementById("capital").textContent = capital.toFixed(2);
+
+    // 表示用（例：合計 or 平均など用途に応じて）
+  const T = (T1 + T2).toFixed(2);
+
+  document.getElementById("result").textContent = T;
 
   
   const callbackName = "cb_" + Date.now();
