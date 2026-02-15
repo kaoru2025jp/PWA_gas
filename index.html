@@ -69,6 +69,22 @@ function calc() {
 
   document.getElementById("result").textContent = T;
 
+  // ===== 追加計算 =====
+
+  // 流動資産・流動負債
+  const currentAssets = O1 * T1;
+  const currentLiabilities = O1 * T2;
+
+  // 固定資産・資本金
+  const fixedAssets = B - currentAssets;
+  const capital = B - currentLiabilities;
+
+  // 表示（小数2桁）
+  document.getElementById("ca").textContent = currentAssets.toFixed(2);
+  document.getElementById("cl").textContent = currentLiabilities.toFixed(2);
+  document.getElementById("fa").textContent = fixedAssets.toFixed(2);
+  document.getElementById("capital").textContent = capital.toFixed(2);
+
   
   const callbackName = "cb_" + Date.now();
   window[callbackName] = function(res) {
